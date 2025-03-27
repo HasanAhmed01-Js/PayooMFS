@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Payoo MFS</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+    <main class="flex justify-center items-center">
+        <div class="card w-96 bg-base-100 shadow-sm">
+            <div class="card-body">
+                <!--Balance Section Start-->
+                <div class="stats bg-base-100 border border-base-300 bg-gray-200">
+                    <div class="stat">
+                        <div class="stat-title text-neutral">Account balance</div>
+                        <div id="available-balance" class="stat-value">9400</div>
+                    </div>
+
+                    <div class="flex justify-center items-center stat">
+                        <div class="stat-title text-neutral">Logout</div>
+                        <button id="Logout" type="submit" value="Submit" class="btn btn-xs btn-neutral">
+                            Logout
+                        </button>
+                    </div>
+                </div>
+                <!--Balance Section End-->
+            </div>
+
+
+            <div class="divider"></div>
+            <!--Add Money & Cashout Action Section Start -->
+            <div class="card-body border border-base-300 bg-gray-100">
+                <button id="btn-add-money" class="btn btn-sm btn-neutral">Add Money</button>
+                <button id="btn-cash-out" class="btn btn-sm btn-neutral">Cash Out</button>
+            </div>
+
+            <!--Add Money & Cashout Action Section Start -->
+            <div class="divider"></div>
+
+            <!--Form For Add Money Start-->
+            <fieldset id="add-money-form" class="fieldset w-sm bg-base-200 border border-base-300 p-4 rounded-box">
+                <legend class="fieldset-legend text-center text-2xl">
+                    Add Money
+                </legend>
+
+                <label class="fieldset-label">Enter Amount</label>
+                <input id="amount-add-money" type="text" class="input" placeholder="Amount" />
+
+                <label class="fieldset-label">Enter Pin Number</label>
+                <input id="pin-number" type="password" class="input" placeholder="Enter PIN Number" />
+
+                <button id="add-money-button" class="btn btn-info mt-4">
+                    Add Money
+                </button>
+            </fieldset>
+            <!--Form For Add Money End-->
+
+            <!--Form For Cash Out Start-->
+            <fieldset id="cash-out-form"
+                class="hidden fieldset w-sm bg-base-200 border border-base-300 p-4 rounded-box">
+                <legend class="fieldset-legend text-center text-2xl">Cash Out</legend>
+
+                <label class="fieldset-label">Enter Amount</label>
+                <input id="amount-cash-out" type="text" class="input" placeholder="Amount" />
+
+                <label class="fieldset-label">Enter Pin Number</label>
+                <input id="cash-out-pin" type="password" class="input" placeholder="Enter PIN Number" />
+
+                <button id="cash-out-button" class="btn btn-info mt-4">Cash Out</button>
+            </fieldset>
+            <!--Form For Cash Out End-->
+        </div>
+    </main>
+
+    <script src="js/utilities.js"></script>
+    <script src="js/home.js"></script>
+</body>
+
+</html>
